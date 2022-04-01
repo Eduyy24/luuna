@@ -5,6 +5,7 @@ import style from './Header.module.css';
 import Link from 'next/link';
 
 /**
+ * Header Component
  * Static component that renders a simple header
  * @returns {JSX.Element}
  */

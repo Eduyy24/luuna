@@ -6,10 +6,11 @@ interface ContainerProps {
 }
 
 /**
+ *  Continaer Component
  *  Wrapper componente for limit width in diferents width of screens
  * @param {ContainerProps} param props
- * @property {JSX.children} children component to render un wrapper
- * @returns {JSX.Element}
+ * @property {JSX.children} children Component to render in wrapper
+ * @returns {JSX.Element} Component result to render
  */
 export const Container: FunctionComponent<ContainerProps> = ({children}) => {
   return (

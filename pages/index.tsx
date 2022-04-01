@@ -1,7 +1,12 @@
 import type { NextPage } from 'next'
 import { Layout } from '../components/Layout/Layaut'
 
-const Home: NextPage = () => {
+/**
+ * Home Page
+ * root page with principal informatión to render
+ * @returns {JSX.Element} Page to render
+ */
+const Home: NextPage = (): JSX.Element => {
   return (
     <Layout>
       <div>

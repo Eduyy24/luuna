@@ -8,6 +8,7 @@ import iconLinkedin from '../../public/svg/icon-linkedin.svg'
 import { Container } from '../Container/Container';
 
 /**
+ * Footer Component
  * Component that renders the footer of the page with the project information
  * @returns {JSX.Element}
  */
