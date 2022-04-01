@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import style from './Footer.module.css';
 import Image from 'next/image';
 import iconGithub from '../../public/svg/icon-github.svg'
@@ -11,7 +11,7 @@ import { Container } from '../Container/Container';
  * Component that renders the footer of the page with the project information
  * @returns {JSX.Element}
  */
-export const Footer = (): JSX.Element => {
+export const Footer: FunctionComponent = (): JSX.Element => {
   return (
     <div className={style.container}>
       <Container>
