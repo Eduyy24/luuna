@@ -1,0 +1,9 @@
+/* TODO: se calcula el height tomando como base a height-min en .container
+  del componente de <Layout />, para utilizar todo el espacio de pantalla disponible
+  dentro de <Layout />
+*/
+.container {
+  border-top: 1px solid rgb(242, 242, 242);
+  height: calc(30vh - 60px);
+  background-color: var(--white);
+}
