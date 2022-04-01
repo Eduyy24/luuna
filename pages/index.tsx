@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import { LogoSection } from '../components/Home/LogoSection/LogoSection'
+import { NavSection } from '../components/Home/NavSection/NavSection'
 import { Layout } from '../components/Layout/Layaut'
 
 /**
@@ -12,8 +13,7 @@ const Home: NextPage = (): JSX.Element => {
     <Layout>
       <>
         <LogoSection />
-        <section>
-        </section>
+        <NavSection />
       </>
     </Layout>
   )
