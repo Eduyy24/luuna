@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
+import { CardIcon } from "../../CardIcon/CardIcon";
 import style from './NavSection.module.css';
-import Image from 'next/image'
+import icon from '../../../public/svg/icon-github.svg'
 
 /**
  * NavSection Component
@@ -12,6 +13,8 @@ import Image from 'next/image'
 export const NavSection: FunctionComponent = () => {
   return (
     <section className={style.container}>
+      <CardIcon label="Buscar Usuario" svgIcon={icon}/>
+      <CardIcon label="Buscar Repositorio" svgIcon={icon} />
     </section>
   )
 }
