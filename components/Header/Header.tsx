@@ -1,5 +1,5 @@
 import React from 'react';
-import iconLogo from '../../public/icon-logo.png'
+import iconLogo from '../../public/images/icon-logo.png'
 import Image from 'next/image'
 import style from './Header.module.css';
 import Link from 'next/link';

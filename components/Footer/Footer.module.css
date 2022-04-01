@@ -1,10 +1,31 @@
-
 .container {
   border-top: 1px solid rgb(242, 242, 242);
   height: 200px;
   background-color: var(--white);
+  margin-top: 1rem;
+  padding: 2rem 0rem;
 }
 
 .footer {
   display: flex;
+  justify-content: space-around;
+
+  height: 100%;
+}
+
+.footer > div {
+  margin: 0rem 1rem;
+}
+.footer > div span {
+  display: block;
+}
+
+.footer > div span:first-child {
+  margin-bottom: 1.5rem;
+}
+
+.container_icons {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 1rem;
 }
