@@ -3,6 +3,11 @@ import style from './LogoSection.module.css';
 import Image from 'next/image'
 import logo from '../../../public/images/logo.png'
 
+/**
+ * LogoSection Component
+ * Static component with basic info
+ * @returns {JSX.Element} Element to render
+ */
 
 export const LogoSection: FunctionComponent = () => {
   return (
