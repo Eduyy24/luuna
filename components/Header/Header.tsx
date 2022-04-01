@@ -4,7 +4,11 @@ import Image from 'next/image'
 import style from './Header.module.css';
 import Link from 'next/link';
 
-export const Header = () => {
+/**
+ * Static component that renders a simple header
+ * @returns {JSX.Element}
+ */
+export const Header = (): JSX.Element => {
   return (
     <div className={style.container}>
       <header className={style.header}>
