@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import { LogoSection } from '../components/Home/LogoSection/LogoSection'
 import { Layout } from '../components/Layout/Layaut'
 
 /**
@@ -9,9 +10,11 @@ import { Layout } from '../components/Layout/Layaut'
 const Home: NextPage = (): JSX.Element => {
   return (
     <Layout>
-      <div>
-        <h1>Hola</h1>
-      </div>
+      <>
+        <LogoSection />
+        <section>
+        </section>
+      </>
     </Layout>
   )
 }
