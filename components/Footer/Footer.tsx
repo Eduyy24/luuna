@@ -7,7 +7,11 @@ import iconLinkedin from '../../public/svg/icon-linkedin.svg'
 
 import { Container } from '../Container/Container';
 
-export const Footer = () => {
+/**
+ * Component that renders the footer of the page with the project information
+ * @returns {JSX.Element}
+ */
+export const Footer = (): JSX.Element => {
   return (
     <div className={style.container}>
       <Container>
