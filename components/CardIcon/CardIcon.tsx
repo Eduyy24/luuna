@@ -9,6 +9,12 @@ type CardIconProps = {
   route: string;
 }
 
+/**
+ * CardIcon Component
+ * Render a card for navigation to page in route property
+ * @param {CardIconProps} props props for component
+ * @returns {JSX.Element} Element to render
+ */
 export const CardIcon: FunctionComponent<CardIconProps> = ({
   svgIcon, label, route
 }) => {

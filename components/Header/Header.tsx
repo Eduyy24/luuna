@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 import iconLogo from '../../public/images/icon-logo.png'
+import Link from 'next/link';
 import Image from 'next/image'
 import style from './Header.module.css';
-import Link from 'next/link';
 
 /**
  * Header Component
@@ -14,13 +14,15 @@ export const Header: FunctionComponent = (): JSX.Element => {
     <div className={style.container}>
       <header className={style.header}>
         <Link href='/' passHref>
-        <Image
-            src={iconLogo}
-            alt="Icono de la página"
-            className={style.icon}
-            height={50}
-            width={50}
-          />
+          <a>
+            <Image
+              src={iconLogo}
+              alt="Icono de la página"
+              className={style.icon}
+              height={50}
+              width={50}
+            />
+          </a>
         </Link>
       </header>
     </div>
