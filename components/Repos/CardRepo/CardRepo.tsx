@@ -9,10 +9,10 @@ type Props = {
 }
 
 /**
- * CardUser Component
- * Render info of user
+ * CardRepo Component
+ * Render info of repo
  * @param {Props} props props of component
- * @property {IUserModel} user user to render
+ * @property {IRepoModel} user repo to render
  * @returns {JSX.Element} Component to render
  */
 export const CardRepo: FunctionComponent<Props> = ({repo}) => {
