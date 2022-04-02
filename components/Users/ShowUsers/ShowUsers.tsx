@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import IUserModel from "../../../models/UserModel";
 import { CardUser } from "../CardUser/CardUser";
-import style from './SomeUsers.module.css'
+import style from './ShowUsers.module.css'
 
 type Props = {
   users: IUserModel[]

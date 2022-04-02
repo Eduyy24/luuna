@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
 import IRepoModel from "../../../models/RepoModel";
 import { CardRepo } from "../CardRepo/CardRepo";
-import style from './SomeUsers.module.css'
+import style from './ShowRepos.module.css'
 
 type Props = {
   repos: IRepoModel[]

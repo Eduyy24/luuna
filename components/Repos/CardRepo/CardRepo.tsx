@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { FunctionComponent } from "react";
 import IRepoModel from "../../../models/RepoModel";
-import style from './CardUser.module.css'
+import style from './CardRepo.module.css'
 
 type Props = {
   repo: IRepoModel
@@ -17,6 +17,7 @@ type Props = {
 export const CardRepo: FunctionComponent<Props> = ({repo}) => {
   return (
     <div className={style.container}>
+      {repo.description}
     </div>
   )
 }

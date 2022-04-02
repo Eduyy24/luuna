@@ -1,7 +1,8 @@
 import axios from "axios";
-import React, { FunctionComponent, useState } from "react";
+import React, { useState } from "react";
 import { CardSearch } from "../../components/CardSearch/CardSearch";
 import { Layout } from "../../components/Layout/Layaut";
+import { ShowRepos } from "../../components/Repos/ShowRepos/ShowRepos";
 import IRepoModel from "../../models/RepoModel";
 import { OnChangeFuntion } from "../../utils/types";
 
@@ -20,7 +21,7 @@ export const getServerSideProps = async () => {
   }
 }
 
-const Repos: FunctionComponent = () => {
+const Repos = ({someRepos}: {someRepos: IRepoModel[]}) => {
   const [repos, setRepos] = useState<[]>([])
   const [inputText, setInputText] = useState('')
   const [loading, setLoading] = useState(false)
@@ -63,7 +64,7 @@ const Repos: FunctionComponent = () => {
             repos.length ? (
               <div></div>
             ) : (
-              <div></div>
+              <ShowRepos title="...aquí algunos repositorios" repos={someRepos} />
             )
           }
         </>
