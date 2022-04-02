@@ -12,21 +12,19 @@ import iconRepo from '../../../public/svg/icon-repository.svg'
  */
 
 export const NavSection: FunctionComponent = () => {
-  const onClickSearchUser = () => {}
-  const onClickSearchRepo = () => {}
-
   return (
     <section className={style.container}>
-      <CardIcon
-        label="Buscar Usuario"
-        svgIcon={iconUser}
-        onClick={onClickSearchUser}
-      />
-      <CardIcon
-        label="Buscar Repositorio"
-        svgIcon={iconRepo}
-        onClick={onClickSearchRepo}
-      />
+        <CardIcon
+          label="Buscar Usuario"
+          svgIcon={iconUser}
+          route='/users'
+        />
+        <CardIcon
+          label="Buscar Repositorio"
+          svgIcon={iconRepo}
+          route='/repos'
+        />
+
     </section>
   )
 }
