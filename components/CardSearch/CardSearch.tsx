@@ -15,6 +15,11 @@ type CardSearchProps = {
 /**
  * CardSearch Component
  * Wrapper for result to search in component
+ * @property {JSX.Element} children Elemento to render un compornent
+ * @property {string} title text for title in component
+ * @property {EmptyFuntion} onClickSearch Callback for event click in search
+ * @property {OnChangeFuntion} onChangeInput Callback for canhe event in input to search
+ * @property {boolean} isLoading state of load for request, display in input
  * @returns {JSX.Element} Element to render
  */
 export const CardSearch: FunctionComponent<CardSearchProps> = ({

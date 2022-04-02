@@ -12,6 +12,7 @@ type Props = {
  * ShowUsers Component
  * @param {Props} props props of component
  * @property {IUserModel[]} users list user to render
+ * @property {string} title title for component
  * @returns {JSX.Element} Component to render
  */
 const ShowUsersComponent: FunctionComponent<Props> = ({users, title}) => {

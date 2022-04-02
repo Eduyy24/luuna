@@ -12,6 +12,7 @@ type Props = {
  * ShowRepos Component
  * @param {Props} props props of component
  * @property {IRepoModel[]} repos list repos to render
+ * @property {string} title title for compoenent
  * @returns {JSX.Element} Component to render
  */
 const ShowReposComponent: FunctionComponent<Props> = ({repos, title}) => {
