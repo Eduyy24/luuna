@@ -1,2 +1,24 @@
 .container {
+  height: 140px;
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent);
+}
+
+.container p:first-child {
+  justify-content: end;
+  display: flex;
+}
+
+.container p:first-child a {
+  margin-right: 0.3rem;
+}
+
+.container div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.container div span {
+  margin-left: 0.2rem;
 }

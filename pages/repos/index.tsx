@@ -9,7 +9,7 @@ import { OnChangeFuntion } from "../../utils/types";
 export const getServerSideProps = async () => {
   let someRepos: IRepoModel[] = [];
   try {
-    const {data} = await axios.get('https://api.github.com/search/repositories?q=a&page=1&per_page=10')
+    const {data} = await axios.get('https://api.github.com/search/repositories?q=react&page=1&per_page=10')
     someRepos = data.items;
   } catch (error) {
     console.error(error)
