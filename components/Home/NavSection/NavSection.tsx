@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from "react";
 import { CardIcon } from "../../CardIcon/CardIcon";
 import style from './NavSection.module.css';
-import icon from '../../../public/svg/icon-github.svg'
+import iconUser from '../../../public/svg/icon-user.svg'
+import iconRepo from '../../../public/svg/icon-repository.svg'
 
 /**
  * NavSection Component
@@ -11,10 +12,21 @@ import icon from '../../../public/svg/icon-github.svg'
  */
 
 export const NavSection: FunctionComponent = () => {
+  const onClickSearchUser = () => {}
+  const onClickSearchRepo = () => {}
+
   return (
     <section className={style.container}>
-      <CardIcon label="Buscar Usuario" svgIcon={icon}/>
-      <CardIcon label="Buscar Repositorio" svgIcon={icon} />
+      <CardIcon
+        label="Buscar Usuario"
+        svgIcon={iconUser}
+        onClick={onClickSearchUser}
+      />
+      <CardIcon
+        label="Buscar Repositorio"
+        svgIcon={iconRepo}
+        onClick={onClickSearchRepo}
+      />
     </section>
   )
 }
