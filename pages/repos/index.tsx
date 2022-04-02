@@ -62,7 +62,7 @@ const Repos = ({someRepos}: {someRepos: IRepoModel[]}) => {
         <>
           {
             repos.length ? (
-              <div></div>
+              <ShowRepos title="Tus resultados" repos={repos} />
             ) : (
               <ShowRepos title="...aquí algunos repositorios" repos={someRepos} />
             )
