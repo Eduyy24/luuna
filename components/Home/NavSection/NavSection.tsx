@@ -24,7 +24,6 @@ export const NavSection: FunctionComponent = () => {
           svgIcon={iconRepo}
           route='/repos'
         />
-
     </section>
   )
 }
