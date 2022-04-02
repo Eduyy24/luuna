@@ -5,6 +5,7 @@ import style from './SomeUsers.module.css'
 
 type Props = {
   users: IUserModel[]
+  title: string;
 }
 
 /**
@@ -13,11 +14,11 @@ type Props = {
  * @property {IUserModel[]} users list user to render
  * @returns {JSX.Element} Component to render
  */
-const SomeUsersComponent: FunctionComponent<Props> = ({users}) => {
+const ShowUsersComponent: FunctionComponent<Props> = ({users, title}) => {
   return (
     <div className={style.container}>
       {console.log('render SomeUsersComponent')}
-      <p className={style.title}>...aquí tienes algunos usuarios</p>
+      <p className={style.title}>{title}</p>
       <div className={style.container_user}>
         {
           users.map((user, idx) => (
@@ -29,5 +30,5 @@ const SomeUsersComponent: FunctionComponent<Props> = ({users}) => {
   )
 }
 
-export const SomeUsers = React.memo(SomeUsersComponent)
+export const ShowUsers = React.memo(ShowUsersComponent)
 

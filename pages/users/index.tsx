@@ -4,7 +4,7 @@ import { CardSearch } from "../../components/CardSearch/CardSearch";
 import { Layout } from "../../components/Layout/Layaut";
 import IUserModel from "../../models/UserModel";
 import { OnChangeFuntion } from "../../utils/types";
-import { SomeUsers } from "../../components/Users/SomeUsers/SomeUsers";
+import { ShowUsers } from "../../components/Users/SomeUsers/SomeUsers";
 
 export const getServerSideProps = async () => {
   let someUsers: IUserModel[] = [];
@@ -73,9 +73,9 @@ const Users = ({someUsers}: {someUsers: IUserModel[]}) => {
         <>
           {
             users.length ? (
-              <div></div>
+              <ShowUsers title="Tus resultados" users={users} />
             ) : (
-              <SomeUsers users={someUsers} />
+              <ShowUsers title="...aquí tienes algunos usuarios" users={someUsers} />
             )
           }
         </>
