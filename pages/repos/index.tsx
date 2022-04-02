@@ -6,7 +6,7 @@ import { ShowRepos } from "../../components/Repos/ShowRepos/ShowRepos";
 import IRepoModel from "../../models/RepoModel";
 import { OnChangeFuntion } from "../../utils/types";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let someRepos: IRepoModel[] = [];
   try {
     const {data} = await axios.get('https://api.github.com/search/repositories?q=react&page=1&per_page=10')

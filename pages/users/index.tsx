@@ -6,7 +6,7 @@ import IUserModel from "../../models/UserModel";
 import { OnChangeFuntion } from "../../utils/types";
 import { ShowUsers } from "../../components/Users/ShowUsers/ShowUsers";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   let someUsers: IUserModel[] = [];
   try {
     const {data} = await axios.get('https://api.github.com/users?page=1&per_page=10')
