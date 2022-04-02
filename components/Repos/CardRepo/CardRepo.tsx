@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React, { FunctionComponent } from "react";
-import IUserModel from "../../../models/UserModel";
+import IRepoModel from "../../../models/RepoModel";
 import style from './CardUser.module.css'
 
 type Props = {
-  user: IUserModel
+  repo: IRepoModel
 }
 
 /**
@@ -14,13 +14,9 @@ type Props = {
  * @property {IUserModel} user user to render
  * @returns {JSX.Element} Component to render
  */
-export const CardUser: FunctionComponent<Props> = ({user}) => {
+export const CardRepo: FunctionComponent<Props> = ({repo}) => {
   return (
     <div className={style.container}>
-      <Image src={user.avatar_url} alt='avatar user' width={100} height={100} />
-      <a target='_blank' href={`https://github.com/${user.login}`} rel='noreferrer' >
-        {user.login}
-      </a>
     </div>
   )
 }

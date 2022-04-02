@@ -4,7 +4,7 @@ import { CardSearch } from "../../components/CardSearch/CardSearch";
 import { Layout } from "../../components/Layout/Layaut";
 import IUserModel from "../../models/UserModel";
 import { OnChangeFuntion } from "../../utils/types";
-import { ShowUsers } from "../../components/Users/SomeUsers/SomeUsers";
+import { ShowUsers } from "../../components/Users/ShowUsers/ShowUsers";
 
 export const getServerSideProps = async () => {
   let someUsers: IUserModel[] = [];

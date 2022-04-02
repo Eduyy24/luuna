@@ -9,7 +9,7 @@ type Props = {
 }
 
 /**
- * SomeUsers Component
+ * ShowUsers Component
  * @param {Props} props props of component
  * @property {IUserModel[]} users list user to render
  * @returns {JSX.Element} Component to render
