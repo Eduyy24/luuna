@@ -24,11 +24,15 @@
   align-items: center;
 }
 
-.container_inputs input{
+.container_inputs > div {
+  width: 100%;
+}
+
+.container_inputs input {
   margin-right: 1rem;
 }
 
-.container_inputs button{
+.container_inputs button {
   border: none;
   background-color: var(--white);
   cursor: pointer;

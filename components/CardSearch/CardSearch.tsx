@@ -9,6 +9,7 @@ type CardSearchProps = {
   title: string;
   onClickSearch: EmptyFuntion;
   onChangeInput: OnChangeFuntion;
+  isLoading: boolean
 }
 
 /**
@@ -20,13 +21,16 @@ export const CardSearch: FunctionComponent<CardSearchProps> = ({
   children,
   title,
   onClickSearch,
-  onChangeInput
+  onChangeInput,
+  isLoading,
 }) => {
   return (
     <div className={style.container}>
       <h2>{title}</h2>
       <div className={style.container_inputs}>
-        <input onChange={onChangeInput} className="input is-rounded" type="text" placeholder="Buscar" />
+        <div className={`control ${isLoading ? 'is-loading' : ''}`}>
+          <input onChange={onChangeInput} className="input is-rounded" type="text" placeholder="Buscar" />
+        </div>
         <button onClick={onClickSearch}>
           <Image  src={iconSearch} alt='icon search' height={30} width={30} />
         </button>

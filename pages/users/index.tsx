@@ -7,25 +7,57 @@ import { OnChangeFuntion } from "../../utils/types";
 import { SomeUsers } from "../../components/Users/SomeUsers/SomeUsers";
 
 export const getServerSideProps = async () => {
-  const response = await axios.get('https://api.github.com/users?page=1&per_page=10')
+  let someUsers: IUserModel[] = [];
+  try {
+    const {data} = await axios.get('https://api.github.com/users?page=1&per_page=10')
+    someUsers = data;
+  } catch (error) {
+    console.error(error)
+  }
   return {
     props: {
-      someUsers: response.data,
+      someUsers,
     }
   }
 }
+
+/**
+ * Users Page
+ * route="/users"
+ * @property {IUserModel[]} someUsers List of users for show prev
+ * @returns {JSX.Element} Page to render
+ */
 const Users = ({someUsers}: {someUsers: IUserModel[]}) => {
   const [users, setUsers] = useState<IUserModel[]>([])
   const [inputText, setInputText] = useState('')
+  const [loading, setLoading] = useState(false)
+
+
+  /**
+   * Search user receive in the api of github and return up to 10 matches
+   * @param {string} user Name to search
+   */
+  const searchUser = async (user: string) => {
+    const api = `https://api.github.com/search/users?q=${user}&page=1&per_page=10`
+    try {
+      const {data} = await axios.get(api)
+      setUsers(data.items)
+    } catch (error) {
+      console.error(error)
+      alert('Lo sentimos, ocurrio un error')
+    }
+  }
 
   const onClickSearch = async () => {
+    setLoading(true);
     if(inputText.trim() === '') {
       setUsers([]);
     } else {
-      console.log('inputText', inputText);
-     // await searchUser();
+      await searchUser(inputText);
     }
+    setLoading(false);
   }
+
   const onChangeInput: OnChangeFuntion = (e) => {
     setInputText(e.target.value);
   }
@@ -36,6 +68,7 @@ const Users = ({someUsers}: {someUsers: IUserModel[]}) => {
         title="Usuarios"
         onClickSearch={onClickSearch}
         onChangeInput={onChangeInput}
+        isLoading={loading}
       >
         <>
           {
