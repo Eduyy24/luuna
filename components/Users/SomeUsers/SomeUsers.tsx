@@ -16,6 +16,7 @@ type Props = {
 export const SomeUsers: FunctionComponent<Props> = ({users}) => {
   return (
     <div className={style.container}>
+      <p className={style.title}>...aquí tienes algunos usuarios</p>
       {
         users.map((user, idx) => (
           <CardUser key={idx} user={user} />

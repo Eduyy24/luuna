@@ -1,3 +1,8 @@
 .container {
   margin-top: 1rem;
 }
+
+.title {
+  text-align: right;
+  color: var(--gray);
+}
