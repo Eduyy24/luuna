@@ -13,9 +13,10 @@ type Props = {
  * @property {IUserModel[]} users list user to render
  * @returns {JSX.Element} Component to render
  */
-export const SomeUsers: FunctionComponent<Props> = ({users}) => {
+const SomeUsersComponent: FunctionComponent<Props> = ({users}) => {
   return (
     <div className={style.container}>
+      {console.log('render SomeUsersComponent')}
       <p className={style.title}>...aquí tienes algunos usuarios</p>
       <div className={style.container_user}>
         {
@@ -27,3 +28,6 @@ export const SomeUsers: FunctionComponent<Props> = ({users}) => {
     </div>
   )
 }
+
+export const SomeUsers = React.memo(SomeUsersComponent)
+

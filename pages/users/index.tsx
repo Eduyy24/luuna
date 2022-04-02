@@ -16,11 +16,18 @@ export const getServerSideProps = async () => {
 }
 const Users = ({someUsers}: {someUsers: IUserModel[]}) => {
   const [users, setUsers] = useState<IUserModel[]>([])
-  const onClickSearch = () => {
-    console.log('someUsers', someUsers);
+  const [inputText, setInputText] = useState('')
+
+  const onClickSearch = async () => {
+    if(inputText.trim() === '') {
+      setUsers([]);
+    } else {
+      console.log('inputText', inputText);
+     // await searchUser();
+    }
   }
   const onChangeInput: OnChangeFuntion = (e) => {
-    console.log(e.target.value);
+    setInputText(e.target.value);
   }
 
   return (

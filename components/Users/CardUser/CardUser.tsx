@@ -19,7 +19,7 @@ export const CardUser: FunctionComponent<Props> = ({user}) => {
   return (
     <div className={style.container}>
       <Image src={user.avatar_url} alt='avatar user' width={100} height={100} />
-      <a href={`https://github.com/${user.login}`}>
+      <a target='_blank' href={`https://github.com/${user.login}`} rel='noreferrer' >
         {user.login}
       </a>
     </div>
