@@ -36,7 +36,7 @@ export const CardSearch: FunctionComponent<CardSearchProps> = ({
         <div className={`control ${isLoading ? 'is-loading' : ''}`}>
           <input onChange={onChangeInput} className="input is-rounded" type="text" placeholder="Buscar" />
         </div>
-        <button onClick={onClickSearch}>
+        <button onClick={onClickSearch} data-testid='btnSearch'>
           <Image  src={iconSearch} alt='icon search' height={30} width={30} />
         </button>
       </div>
