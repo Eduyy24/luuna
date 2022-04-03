@@ -1,12 +1,12 @@
 import {render} from '@testing-library/react';
-import {Footer} from './Footer'
+import {Header} from './Header'
 
 /**
  * Dado que es un componente estático solo realizo una prueba de Snapshot
  */
-describe('<Footer />',()=>{
+describe('<Header />',()=>{
   test('toMatchSnapshot', () => {
-    const wrapper = render(<Footer />)
+    const wrapper = render(<Header />)
     expect(wrapper).toMatchSnapshot()
   })
 })
