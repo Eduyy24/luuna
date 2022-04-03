@@ -5,6 +5,5 @@ export default interface IRepoModel {
     owner: IUserModel;
     description: string;
     html_url: string;
-    stargazers_count: number;
     language: string;
 }

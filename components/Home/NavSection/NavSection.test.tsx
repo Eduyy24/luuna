@@ -10,7 +10,7 @@ describe('<NavSection />',()=>{
     expect(wrapper).toMatchSnapshot()
   })
 
-  test('Validate render of <CardIcon /> component', () => {
+  test('Validate render of label in <CardIcon />', () => {
     const {queryByText} = render(<NavSection />)
     const lblRepo = queryByText('Buscar Repositorio');
     const lblUser = queryByText('Buscar Usuario');
