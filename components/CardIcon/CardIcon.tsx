@@ -22,12 +22,14 @@ export const CardIcon: FunctionComponent<CardIconProps> = ({
 }) => {
   return (
     <Link href={route} passHref>
-      <div className={style.container}>
-        <div>
-          <Image alt="icon-button" src={svgIcon} height={180} width={180} />
+      <a data-testid="aCardIcon">
+        <div className={style.container}>
+          <div>
+            <Image alt="icon-button" src={svgIcon} height={180} width={180} />
+          </div>
+          <span>{label}</span>
         </div>
-        <span>{label ?? ''}</span>
-      </div>
+      </a>
     </Link>
   )
 }

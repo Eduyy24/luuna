@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { CardSearch } from "../../components/CardSearch/CardSearch";
-import { Layout } from "../../components/Layout/Layaut";
+import { Layout } from "../../components/Layout/Layout";
 import IUserModel from "../../models/UserModel";
 import { OnChangeFuntion } from "../../utils/types";
 import { ShowUsers } from "../../components/Users/ShowUsers/ShowUsers";

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { CardSearch } from "../../components/CardSearch/CardSearch";
-import { Layout } from "../../components/Layout/Layaut";
+import { Layout } from "../../components/Layout/Layout";
 import { ShowRepos } from "../../components/Repos/ShowRepos/ShowRepos";
 import IRepoModel from "../../models/RepoModel";
 import { OnChangeFuntion } from "../../utils/types";
