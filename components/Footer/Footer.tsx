@@ -25,7 +25,7 @@ export const Footer: FunctionComponent = (): JSX.Element => {
             <div>
               <span><strong>Hecho para</strong></span>
               <span>
-                <a href="https://luuna.mx/">
+                <a href="https://github.com/luuna-tech/test/tree/master/frontend">
                 {' '}Prueba tecnica</a> de la empresa
                 {' '}<a href="https://luuna.mx/">Luuna</a></span>
             </div>
@@ -35,7 +35,7 @@ export const Footer: FunctionComponent = (): JSX.Element => {
               <span>
                 <a href='https://twitter.com/eduyy24'>Eduardo Pinedo</a>
                 {' '} almacenado en este
-                {' '} <a href='https://twitter.com/eduyy24'>repositorio.</a>
+                {' '} <a href='https://github.com/Eduyy24/luuna'>repositorio.</a>
               </span>
               <div className={style.container_icons}>
                 <a href="https://github.com/Eduyy24?tab=repositories">
